@@ -16,6 +16,11 @@ import java.util.List;
 public class ParentController {
     @Autowired
     private ParentService parentService;
+    private Parent parentTransactions;
+
+    public void setParentTransactions(Parent parentTransactions) {
+        this.parentTransactions = parentTransactions;
+    }
 
     @GetMapping("/getAllParentsTransactions")
     public ResponseEntity<ResponseDto> getAllParentsTransactions(){
